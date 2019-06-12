@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" 
+
+
+<html class="gr__kernow_me"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>kernow.me::loopslicer</title>
+		<link rel="icon" type="image/png" href="../img/fav.png">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> 
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+
+    
+        <div class="container">
+
+  <div class="w3-card-4" style="width:100%">
+            
+            <div id="demo">
+				<div id="waveform">
+						<span id="progressmode" style="display: none;"><h3>Analysing 99%</h3></span>		
+						<div class="progress progress-striped active" id="progress-bar" style="display: none;">			
+							<div class="progress-bar progress-bar-info" style="width: 99%;"></div>
+						</div>		
+				<wave style="display: block; position: relative; user-select: none; height: 240px; overflow: auto hidden;"><canvas width="1140" height="240" style="position: absolute; z-index: 1; left: 0px; top: 0px; bottom: 0px; width: 1140px;"></canvas><wave style="position: absolute; z-index: 2; left: 0px; top: 0px; bottom: 0px; overflow: hidden; width: 0px; display: block; box-sizing: border-box; border-right: 1px solid red;"></wave><region class="wavesurfer-region" data-id="lloc" style="position: absolute; z-index: 3; height: 100%; top: 0px; border-top: 5px solid red; border-right: 5px solid transparent; border-left: 2px solid red; left: 0px; width: 0px; background-color: rgba(255, 0, 0, 0); cursor: move;"></region><region class="wavesurfer-region" data-id="rloc" style="position: absolute; z-index: 3; height: 100%; top: 0px; border-top: 5px solid red; border-left: 5px solid transparent; border-right: 2px solid red; left: 1133px; width: 0px; background-color: rgba(255, 0, 0, 0); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_s9c0dbv2gn8" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 370px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_0n24v48asn8" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 932px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_akonupaqhcg" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 583px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_lr2hjfn5u7" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 439px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_vskkhqmlclg" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 724px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_gbl7r9gc11o" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 141px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_jcv93jfr6i" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 998px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_g9esadoi9cg" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 827px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_tmfsbqfp7c" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 257px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_537bd3gp0c8" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 858px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region><region class="wavesurfer-region" data-id="wavesurfer_s0gmkin0us8" style="position: absolute; z-index: 2; height: 100%; top: 0px; left: 1071px; width: 2px; background-color: rgba(0, 255, 0, 0.4); cursor: move;"></region></wave></div>
+               
+  <div class="w3-card-4" style="width:100%">
+					<button data-action="zoomin">                    
+                  					<i class="glyphicon glyphicon-zoom-in"> </i>
+					</button>
+					
+					<button data-action="zoomout" disabled="">
+						<i class="glyphicon glyphicon-zoom-out"> </i>
+					</button>
+</div>
+				<div id="saveModal" class="modal fade" role="dialog" data-backdrop="false">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+						<h4 class="modal-title">Save </h4>
+					  </div>
+					  <div class="modal-body"> 
+						<p>Exporting <span id="slices"></span> slices between L and R locators</p>
+						<span id="zeroslicewarning"></span>
+						<div class="row">
+							<div class="col-md-6">		
+								<p><b>SFZ / MIDI options</b><br>
+								Midi start note: <b><span id="midibase">C0</span></b>
+								</p><form class="form-inline">
+								  <select class="form-control" id="sel1" style="width: 35%">
+									<option>C</option>
+									<option>C#</option>
+									<option>D</option>
+									<option>D#</option>
+									<option>E</option>
+									<option>F</option>
+									<option>F#</option>
+									<option>G</option>
+									<option>G#</option>
+									<option>A</option>
+									<option>A#</option>
+									<option>B</option>							
+								</select>
+								  <select class="form-control" id="sel2" style="width: 35%">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option> 		
+								</select>	
+								<br><br>
+									<div class="radio">
+										<label>
+											<input type="radio" name="rb" id="rbtnC" checked="checked"> Use the chromatic scale
+										</label>
+									</div>
+								<br>
+									<div class="radio">
+										<label>
+											<input type="radio" name="rb" id="rbtnW"> Use white notes only
+										</label>
+									</div>
+								<br>
+									<div class="radio">
+										<label>
+											<input type="radio" name="rb" id="rbtnB"> Use black notes only
+										</label>
+									</div>
+								<br><br>
+								Available notes: <span id="avnotes"></span><br>
+								<span id="avnotewarn"></span>
+								</form>
+								<p></p>
+							</div>
+							<div class="col-md-6">
+							<p><b>Time signature</b><br>
+							<span id="timesig">4/4</span>
+								</p><form class="form-inline">
+								  <select class="form-control" id="sel3" style="width: 35%">
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>	
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>						
+								   </select>
+								  <select class="form-control" id="sel4" style="width: 35%">
+									<option>2</option>
+									<option>4</option>
+									<option>8</option>
+									<option>16</option>
+									<option>32</option>
+								  </select>	
+								  <br><br>
+								  Bars: <input type="text" class="form-control" id="bars" style="width: 20%">&nbsp;&nbsp;
+								  Extra beats: <input type="text" class="form-control" id="beats" style="width: 20%">
+								  <br><br>							  
+								  Estimated BPM: <b>♩ = <span id="estbpm"></span></b><br>
+								</form>
+							</div>
+						</div>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-action="save">Save</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+					  </div>
+					</div>
+				  </div>
+				</div>	
+		
+  <div class="w3-GREY w3-hover-shadow w3-padding-64 w3-center" style="width:100%">		
+                <div class="controls">		
+					<label class="btn btn-primary" for="openfile">
+						<i class="glyphicon glyphicon-open-file"></i>
+						<input id="openfile" type="file" style="display:none;">
+						Open
+					</label>			
+                    <button class="btn btn-primary" data-action="play" id="playbtn">
+                        <i class="glyphicon glyphicon-play-circle"></i>
+                        Play
+                        /
+                        <i class="glyphicon glyphicon-pause"></i>
+                        Pause
+                    </button>				
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#saveModal" data-action="opensavedialog">
+                        <i class="glyphicon glyphicon-save"></i>
+                        Save
+                    </button>
+				</div>	
+				</div>
+              
+               <div class="w3-container">
+
+<div class="w3-green w3-hover-shadow w3-padding-64 w3-center" style="width:`100%">	
+  
+        
+ <h2>Transient detection</h2>	
+ <div class="w3-green w3-hover-shadow w3-padding-64 w3-center" style="width:`100%">
+				
+						<div class="fxsec">
+							Threshold <span id="thrshunits">45</span>
+							<input data-action="tdetect" type="range" min="0" max="100" value="30" style="width: 100%">
+						</div> 
+						<div class="fxsec"><div class="ctrlsectionheading">Nudge all</div>
+							<div align="center">
+								<button data-action="nudgeleft">
+									<i class="glyphicon glyphicon-arrow-left"></i>
+								</button>
+								<button data-action="nudgeright">
+									<i class="glyphicon glyphicon-arrow-right"></i>
+								</button>
+							</div>
+						</div> 						
+					 </div>	
+                     <div class="w3-container">
+  <h2>Playback</h2>
+  
+
+  <div class="w3-green w3-hover-shadow w3-padding-64 w3-center" style="width:`100%">
+                     
+					
+						<div class="fxsec">
+							Tempo <span id="tempounits">1x</span>
+							  <input data-action="tempo" type="range" min="0.4" max="4.0" step="0.01" value="1.0" style="width: 100%">
+							Pitch  <span id="pitchunits">0</span>
+							  <input data-action="pitch" type="range" min="-24" max="24" step="1" value="0">
+						</div>
+					</div>	
+                    </div>	
+					<div class="w3-container">
+  <h2>Envelope</h2>
+
+<div class="w3-card-4 w3-padding-64 w3-center" style="width:100%">
+					 
+					
+						<div class="fxsec">
+							Attack  <span id="attackunits">0ms</span>
+							  <input data-action="attack" type="range" min="0" max="250" step="1" value="0" style="width: 100%">
+							Hold  <span id="holdunits">0ms</span>
+							  <input data-action="hold" type="range" min="0" max="5000" step="0.1" value="0" style="width: 100%">							
+							Decay  <span id="decayunits">∞</span>
+							  <input data-action="decay" type="range" min="1" max="10000" step="1" value="10000" style="width: 100%">
+						</div>
+					</div>	
+					<div class="w3-container">
+  <h2>Compressor</h2>
+
+    <div class="w3-card-4 w3-padding-64 w3-center" style="width:100%">
+					 
+						<div class="fxsec">
+							Threshold   <span id="compthresholdunits">0db</span>
+								  <input data-action="compthreshold" type="range" min="-100" max="0" step="1" value="0" style="width: 100%">
+							Ratio  <span id="compratiounits">1:1</span>
+								  <input data-action="compratio" type="range" min="1" max="20" step="1" value="1" style="width: 100%">
+							Attack  <span id="compattackunits">70ms</span> 
+								  <input data-action="compattack" type="range" min="0.0" max="1.0" step="0.01" value="0.0" style="width: 100%">
+							Release  <span id="compreleaseunits">100ms</span>
+								  <input data-action="comprelease" type="range" min="0.0" max="1.0" step="0.01" value="0.1" style="width: 100%">
+							Gain  <span id="gainunits">0dB</span> 
+								  <input data-action="gain" type="range" min="-24" max="24.0" step="1" value="0" style="width: 100%">
+						</div>	  
+					</div></div>
+                    
+				<div class="w3-container">
+  <h2>FREQUENCY</h2>
+
+  <div class="w3-card-4 w3-center" style="width:100%">
+					<div class="col-md-2">
+						<div class="fxsec"><div class="ctrlsectionheading">Low</div>
+							Freq   <span id="lofrequnits">250Hz</span>
+								  <input data-action="lofreq" type="range" min="40" max="1000" step="1" value="250" style="width: 100%">
+							Gain  <span id="logainunits">0db</span>
+								  <input data-action="logain" type="range" min="-24" max="24" step="1" value="0" style="width: 100%">						
+						</div>
+						<div class="fxsec"><div class="ctrlsectionheading">Mid</div>
+							Freq   <span id="midfrequnits">1000Hz</span>
+								  <input data-action="midfreq" type="range" min="500" max="10000" step="1" value="1000" style="width: 100%">
+							Gain  <span id="midgainunits">0db</span>
+								  <input data-action="midgain" type="range" min="-24" max="24" step="1" value="0" style="width: 100%">
+							Q  <span id="midqunits">1</span>
+								  <input data-action="midq" type="range" min="1" max="100" step="1" value="1" style="width: 100%">								  
+						</div>
+						<div class="fxsec"><div class="ctrlsectionheading">High</div>
+							Freq   <span id="hifrequnits">4000Hz</span>
+								  <input data-action="hifreq" type="range" min="1000" max="15000" step="1" value="5000" style="width: 100%">
+							Gain  <span id="higainunits">0db</span>
+								  <input data-action="higain" type="range" min="-24" max="24" step="1" value="0" style="width: 100%">							
+						</div>						
+					</div>
+					
+					<div class="col-md-1"><div class="ctrlsectionheading"></div>
+					</div>				
+					 
+             </div>
+	    </div>
+		
+		<script src="js/b3.js"></script>
+    
+
+</div></body></html>
