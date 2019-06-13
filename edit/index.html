@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/61/Desktop/slicer%20-%20Copy.html -->
+<html contenteditaable="true" class="env-win env-chrome env-mouse"><!-- Copied from http://kernow.me/loopslicer/ by Cyotek WebCopy 1.7.0.600, Sunday, June 9, 2019, 2:05:16 AM --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./stripper_files/api-audio-recorder.css">
+        
+        <title>kernow.me::Studio Tool</title>
+		<link rel="icon" type="logo/png" href="file:https://thurberstudios.github.io/images/logo.png">
+		<link href="./stripper_files/bootstrap.min.css" rel="stylesheet">
+		<script src="./stripper_files/jquery.min.js.download"></script>
+		<script src="./stripper_files/bootstrap.min.js.download"></script> 
+        <link rel="stylesheet" href="file:///C:/Users/61/Desktop/css/style.css">
+	</head>
+
+    <body itemscope="" itemtype="http://schema.org/WebApplication">
+		<meta itemprop="applicationCategory" content="Music,Audio">
+		<meta itemprop="name" content="Loopslicer">
+		<meta itemprop="about" content="Audio loop slicer and editor. Deconstruct your audio into its constituent beats or notes and export the slices in SFZ+WAV sampler format."> 
+		<meta itemprop="browserRequirements" content="requires HTML5 Canvas, WebAudio and FileAPI support"> 
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			  <div class="container">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a href="file:///C:/Users/61/" class="pull-left"><img style="margin-top: 2px;" src="file:///C:/Users/61/img/kme.png" height="40" width="160" alt="kernow.me"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav"><div class="start-audio-recording recording-style-green" apower-api-binded="1"><div><i class="rec-dot"></i><span>Start</span></div><a class="apower-powerby" href="https://www.apowersoft.com/api/audio-recorder.html" target="_blank">Powered by Apowersoft</a></div><script src="./stripper_files/audio-recorder" defer=""></script>
+
+						<li><a href="file:///C:/Users/61/">Home</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="file:///C:/Users/61/Desktop/slicer%20-%20Copy.html#">Audio <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li class="active"><a href="file:///C:/Users/61/Desktop/index.htm">Loopslicer</a></li>
+								<li><a href="file:///C:/Users/61/pvoc/">PVoc</a></li>
+								<li><a href="file:///C:/Users/61/fftgate/">FFTGate Denoiser</a></li>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+			  </div>
+		</nav>
+
+        <div class="container">
+                <h1>loopslicer<small id="filename"></small></h1>
+			<noscript>
+				<div id="nojs">
+					<h3 align="center">
+					This app requires a Javascript-enabled browser to run. It uses the HTML5 Canvas, WebAudio and File APIs. 
+					</h3>
+				</div>
+			</noscript>
+			<div id="incompat" style="display: none;">
+				<div id="nojs">
+					<h3 align="center">
+					It appears that your browser is incompatible with the latest WebAudio and/or File APIs required to run this app. Sorry!
+					</h3>
+				</div>		
+			</div> 			
+            <div id="demo">
+				<div id="waveform">
+						<span id="progressmode"></span>		
+						<div class="progress progress-striped active" id="progress-bar">			
+							<div class="progress-bar progress-bar-info"></div>
+						</div>		
+				<wave style="display: block; position: relative; user-select: none; height: 120px; width: 100%; overflow: auto hidden;"><canvas style="position: absolute; z-index: 1; left: 0px; top: 0px; bottom: 0px;"></canvas><wave style="position: absolute; z-index: 2; left: 0px; top: 0px; bottom: 0px; overflow: hidden; width: 0px; display: none; box-sizing: border-box; border-right: 1px solid red;"></wave></wave></div>
+					<button data-action="zoomin">
+						<i class="glyphicon glyphicon-zoom-in"> </i>
+					</button>
+					
+					<button data-action="zoomout" disabled="">
+						<i class="glyphicon glyphicon-zoom-out"> </i>
+					</button>
+
+				<div id="saveModal" class="modal fade" role="dialog" data-backdrop="false">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+						<h4 class="modal-title">Save </h4>
+					  </div>
+					  <div class="modal-body"> 
+						<p>Exporting <span id="slices"></span> slices between L and R locators</p>
+						<span id="zeroslicewarning"></span>
+						<div class="row">
+							<div class="col-md-6">		
+								<p><b>SFZ / MIDI options</b><br>
+								Midi start note: <b><span id="midibase">C0</span></b>
+								</p><form class="form-inline">
+								  <select class="form-control" id="sel1" style="width: 35%">
+									<option>C</option>
+									<option>C#</option>
+									<option>D</option>
+									<option>D#</option>
+									<option>E</option>
+									<option>F</option>
+									<option>F#</option>
+									<option>G</option>
+									<option>G#</option>
+									<option>A</option>
+									<option>A#</option>
+									<option>B</option>							
+								</select>
+								  <select class="form-control" id="sel2" style="width: 35%">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option> 		
+								</select>	
+								<br><br>
+									<div class="radio">
+										<label>
+											<input type="radio" name="rb" id="rbtnC" checked="checked"> Use the chromatic scale
+										</label>
+									</div>
+								<br>
+									<div class="radio">
+										<label>
+											<input type="radio" name="rb" id="rbtnW"> Use white notes only
+										</label>
+									</div>
+								<br>
+									<div class="radio">
+										<label>
+											<input type="radio" name="rb" id="rbtnB"> Use black notes only
+										</label>
+									</div>
+								<br><br>
+								Available notes: <span id="avnotes"></span><br>
+								<span id="avnotewarn"></span>
+								</form>
+								
+							</div>
+							<div class="col-md-6">
+							<p><b>Time signature</b><br>
+							<span id="timesig">4/4</span>
+								</p><form class="form-inline">
+								  <select class="form-control" id="sel3" style="width: 35%">
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>	
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>						
+								   </select>
+								  <select class="form-control" id="sel4" style="width: 35%">
+									<option>2</option>
+									<option>4</option>
+									<option>8</option>
+									<option>16</option>
+									<option>32</option>
+								  </select>	
+								  <br><br>
+								  Bars: <input type="text" class="form-control" id="bars" style="width: 20%">&nbsp;&nbsp;
+								  Extra beats: <input type="text" class="form-control" id="beats" style="width: 20%">
+								  <br><br>							  
+								  Estimated BPM: <b>♩ = <span id="estbpm"></span></b><br>
+								</form>
+							</div>
+						</div>
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-action="save">Save</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+					  </div>
+					</div>
+				  </div>
+				</div>	
+				
+                <div class="controls">		
+					<label class="btn btn-primary" for="openfile">
+						<i class="glyphicon glyphicon-open-file"></i>
+						<input id="openfile" type="file" style="display:none;">
+						Open
+					</label>			
+                    <button class="btn btn-primary" data-action="play" id="playbtn">
+                        <i class="glyphicon glyphicon-play-circle"></i>
+                        Play
+                        /
+                        <i class="glyphicon glyphicon-pause"></i>
+                        Pause
+                    </button>				
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#saveModal" data-action="opensavedialog">
+                        <i class="glyphicon glyphicon-save"></i>
+                        Save
+                    </button>
+				</div>	
+				
+				<div class="row">	
+					<div class="col-md-1"><div class="ctrlsectionheading"></div>
+					</div>	
+					
+					<div class="col-md-2"><div class="ctrlsectionheading">Transient detection</div>
+						<div class="fxsec">
+							Threshold <span id="thrshunits">45</span>
+							<input data-action="tdetect" type="range" min="0" max="100" value="30" style="width: 100%">
+						</div> 
+						<div class="fxsec"><div class="ctrlsectionheading">Nudge all</div>
+							<div align="center">
+								<button data-action="nudgeleft">
+									<i class="glyphicon glyphicon-arrow-left"></i>
+								</button>
+								<button data-action="nudgeright">
+									<i class="glyphicon glyphicon-arrow-right"></i>
+								</button>
+							</div>
+						</div> 						
+					 </div>						 
+					<div class="col-md-2"><div class="ctrlsectionheading">Playback</div>
+						<div class="fxsec">
+							Tempo <span id="tempounits">1x</span>
+							  <input data-action="tempo" type="range" min="0.4" max="4.0" step="0.01" value="1.0" style="width: 100%">
+							Pitch  <span id="pitchunits">0</span>
+							  <input data-action="pitch" type="range" min="-24" max="24" step="1" value="0">
+						</div>
+					</div>	
+					
+					<div class="col-md-2"><div class="ctrlsectionheading">Envelope</div>
+						<div class="fxsec">
+							Attack  <span id="attackunits">0ms</span>
+							  <input data-action="attack" type="range" min="0" max="250" step="1" value="0" style="width: 100%">
+							Hold  <span id="holdunits">0ms</span>
+							  <input data-action="hold" type="range" min="0" max="5000" step="0.1" value="0" style="width: 100%">							
+							Decay  <span id="decayunits">∞</span>
+							  <input data-action="decay" type="range" min="1" max="10000" step="1" value="10000" style="width: 100%">
+						</div>
+					</div>	
+					
+					<div class="col-md-2"><div class="ctrlsectionheading">Compressor</div> 
+						<div class="fxsec">
+							Threshold   <span id="compthresholdunits">0db</span>
+								  <input data-action="compthreshold" type="range" min="-100" max="0" step="1" value="0" style="width: 100%">
+							Ratio  <span id="compratiounits">1:1</span>
+								  <input data-action="compratio" type="range" min="1" max="20" step="1" value="1" style="width: 100%">
+							Attack  <span id="compattackunits">70ms</span> 
+								  <input data-action="compattack" type="range" min="0.0" max="1.0" step="0.01" value="0.0" style="width: 100%">
+							Release  <span id="compreleaseunits">100ms</span>
+								  <input data-action="comprelease" type="range" min="0.0" max="1.0" step="0.01" value="0.1" style="width: 100%">
+							Gain  <span id="gainunits">0dB</span> 
+								  <input data-action="gain" type="range" min="-24" max="24.0" step="1" value="0" style="width: 100%">
+						</div>	  
+					</div>
+				
+					<div class="col-md-2">
+						<div class="fxsec"><div class="ctrlsectionheading">Low</div>
+							Freq   <span id="lofrequnits">250Hz</span>
+								  <input data-action="lofreq" type="range" min="40" max="1000" step="1" value="250" style="width: 100%">
+							Gain  <span id="logainunits">0db</span>
+								  <input data-action="logain" type="range" min="-24" max="24" step="1" value="0" style="width: 100%">						
+						</div>
+						<div class="fxsec"><div class="ctrlsectionheading">Mid</div>
+							Freq   <span id="midfrequnits">1000Hz</span>
+								  <input data-action="midfreq" type="range" min="500" max="10000" step="1" value="1000" style="width: 100%">
+							Gain  <span id="midgainunits">0db</span>
+								  <input data-action="midgain" type="range" min="-24" max="24" step="1" value="0" style="width: 100%">
+							Q  <span id="midqunits">1</span>
+								  <input data-action="midq" type="range" min="1" max="100" step="1" value="1" style="width: 100%">								  
+						</div>
+						<div class="fxsec"><div class="ctrlsectionheading">High</div>
+							Freq   <span id="hifrequnits">4000Hz</span>
+								  <input data-action="hifreq" type="range" min="1000" max="15000" step="1" value="5000" style="width: 100%">
+							Gain  <span id="higainunits">0db</span>
+								  <input data-action="higain" type="range" min="-24" max="24" step="1" value="0" style="width: 100%">							
+						</div>						
+					</div>
+					
+					<div class="col-md-1"><div class="ctrlsectionheading"></div>
+					</div>				
+					 
+             </div>
+	    </div>
+		<br>
+		<div class="panel panel-default">
+			<div class="panel-heading">About this app:</div>
+			<div class="panel-body">
+				
+		
+			</div>
+		</div>
+		<script src="file:///C:/Users/61/Desktop/js/b3.js"></script>
+    </div>
+<!-- Copied from http://kernow.me/loopslicer/ by Cyotek WebCopy 1.7.0.600, Sunday, June 9, 2019, 2:05:16 AM -->
+<div class="notify">
+			<!--for item of stack--><!--end for-->
+		</div><div class="agent-popup"><div class="agent-popup-trangle"></div><div class="agent-popup-icon"><div></div><div></div><div></div></div><div class="agent-popup-close"></div></div></body></html>
