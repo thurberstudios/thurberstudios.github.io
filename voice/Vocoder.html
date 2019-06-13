@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://webaudiodemos.appspot.com/Vocoder/index.html# -->
+<html class="no-js gr__webaudiodemos_appspot_com" lang="en"><!--manifest="vocoder.appcache"--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Vocoder</title>
+
+	<link rel="shortcut icon" href="https://webaudiodemos.appspot.com/Vocoder/favicon.ico">
+	<link rel="stylesheet" href="./Vocoder_files/reset.css">
+	<link rel="stylesheet" href="./Vocoder_files/main.css">
+
+	<script src="./Vocoder_files/jquery-1.7.2.min.js.download"></script>
+	<script src="./Vocoder_files/jquery-ui-1.8.21.custom.min.js.download"></script>
+
+	<!-- Visualizer stuff -->
+	<script src="./Vocoder_files/events.js.download"></script>
+
+	<!-- WebGL stuff -->
+	<script src="./Vocoder_files/base.js.download"></script>
+	<script src="./Vocoder_files/cameracontroller.js.download"></script>
+
+	<!-- TODO(kbr): remove this dependency -->
+	<script src="./Vocoder_files/matrix4x4.js.download"></script>
+
+	<!-- Visualizer GL library -->
+	<script src="./Vocoder_files/visualizer.js.download"></script>
+	<script src="./Vocoder_files/shader.js.download"></script>
+
+	<script src="./Vocoder_files/ui.js.download"></script>
+	<script src="./Vocoder_files/main.js.download"></script>
+	<script src="./Vocoder_files/WebMIDIAPI.js.download"></script>
+	<script src="./Vocoder_files/midi.js.download"></script>
+	<script src="./Vocoder_files/vocoder.js.download"></script>
+	<script src="./Vocoder_files/sliders.js.download"></script>
+
+	</head><body data-gr-c-s-loaded="true">// For recording the audio
+	<script src="./Vocoder_files/recorder.js.download"></script>
+
+
+
+	<div id="main" class="container">
+		<header id="header">
+			<img src="./Vocoder_files/logo.png" alt="Web Audio Vocoder">
+			<span id="mobile">{mobile}</span>
+		</header>
+		<section id="content">
+			<div id="modules">
+				<div id="modulator" class="module modulator has-footer ready">
+					<div class="content">
+						<h6>Modulator</h6>	
+						<div class="control-group last" id="modgaingroup">
+							<div class="slider-info">
+								<span class="label">gain</span>
+								<span class="value">1.0</span>
+							</div>
+						<div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="https://webaudiodemos.appspot.com/Vocoder/index.html#" style="left: 25%;"></a></div></div>
+					</div>
+					<footer>
+						<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="modulatorfilename" class="active filename left">gettysburg.ogg</a>
+						<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="liveInput" class="load-file">live input</a>
+					</footer>
+					<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="modpreview" class="preview"><img class="stopped" id="modulatorpreview" src="./Vocoder_files/ico-play.png" alt="Preview icon"></a>
+				</div>
+				<div id="carrier" class="module carrier has-footer ready">
+					<div class="content">
+						<h6>Carrier</h6>	
+						<div class="control-group" id="samplegroup">
+							<div class="slider-info">
+								<span class="label">Sample Level</span>
+								<span class="value">0.0</span>
+							</div>
+						<div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="https://webaudiodemos.appspot.com/Vocoder/index.html#" style="left: 0%;"></a></div></div>
+						<div class="control-group" id="synthgroup">
+							<div class="slider-info">
+								<span class="label">Synth Level</span>
+								<span class="value">1.0</span>
+							</div>
+						<div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="https://webaudiodemos.appspot.com/Vocoder/index.html#" style="left: 50%;"></a></div></div>
+						<div class="control-group" id="noisegroup">
+							<div class="slider-info">
+								<span class="label">Noise Level</span>
+								<span class="value">0.22</span>
+							</div>
+						<div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="https://webaudiodemos.appspot.com/Vocoder/index.html#" style="left: 11%;"></a></div></div>
+						<div class="control-group last" id="detunegroup">
+							<div class="slider-info">
+								<span class="label">Synth Detune</span>
+								<span class="value">0 cents</span>
+							</div>
+						<div class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="https://webaudiodemos.appspot.com/Vocoder/index.html#" style="left: 50%;"></a></div></div>
+<!--
+						<a href="#" class="preview-link"><img src="img/ico-preview.gif" alt="Preview icon" /> Preview</a>
+-->
+					</div>
+					<footer>
+						<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="carrierfilename" class="filename left top">junky.ogg</a>
+						<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="loadcarrier" class="load-file top">Load File...</a>
+						<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="sawtooth" class="sawtooth left">Sawtooth</a>
+						<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="wavetable" class="wavetable active">Wavetable</a>
+					</footer>
+					<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="previewcarrier" class="preview play"><img class="stopped" id="carrierpreview" src="./Vocoder_files/ico-play.png" alt="Preview icon"></a>
+				</div>
+			</div> <!-- /#modules -->
+			<div id="connection">
+				<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="play">Play</a>
+				<img id="record" src="./Vocoder_files/mic128.png" class="recording">
+				<a href="https://webaudiodemos.appspot.com/Vocoder/index.html#" id="recfile"></a>
+			</div> <!-- /#connection -->
+			<div id="results" class="container">
+				<h2 class="before">input</h2>
+				<div id="result-top">
+					<canvas id="view1" width="582" height="150"></canvas>
+				</div>
+				<div id="result-middle">
+					<canvas id="vcanvas" width="582" height="100"></canvas>
+				</div>
+				<h2 class="after">output</h2>
+				<div id="result-bottom">
+					<canvas id="view2" width="582" height="150"></canvas>
+				</div>
+			</div> <!-- /#results -->
+		</section>
+	</div> <!-- /#main -->
+<!--	<div class="link">Code available on <a href="https://github.com/cwilso/Vocoder">GitHub</a>.</div>  -->
+	<div style="display:none" id="controls">
+		<!-- Analyser type -->
+		<input type="radio" name="radioSet" value="data" onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_FREQUENCY); analyserView2.setAnalysisType(ANALYSISTYPE_FREQUENCY);">Frequency
+		<input type="radio" name="radioSet" value="data" onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_SONOGRAM); analyserView2.setAnalysisType(ANALYSISTYPE_SONOGRAM);">Sonogram
+		<input type="radio" name="radioSet" value="data" checked="checked" onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_3D_SONOGRAM); analyserView2.setAnalysisType(ANALYSISTYPE_3D_SONOGRAM);">3D Sonogram
+		<input type="radio" name="radioSet" value="data" onmousedown="analyserView1.setAnalysisType(ANALYSISTYPE_WAVEFORM); analyserView2.setAnalysisType(ANALYSISTYPE_WAVEFORM);">Waveform
+
+		<div id="midisettings">
+			MIDI Input:
+			<select id="midiIn" onchange="changeMidi();">
+				<option value="">Not connected</option>
+			</select>
+		</div>
+
+		<div id="sliders"><div>hi-pass gain<input type="range" min="0" max="1" step="0.001">0</div><div>hi-pass freq<input type="range" min="4000" max="10000" step="6">8000</div><div>hi-pass Q<input type="range" min="1" max="50" step="0.049">1</div><div>mod filter Q<input type="range" min="1" max="20" step="0.019">6</div><div>mod filter post gain<input type="range" min="1" max="20" step="0.019">6</div><div>heterodyne post gain<input type="range" min="1" max="8" step="0.007">2</div><div>lp filter Q<input type="range" min="1" max="100" step="0.099">1</div><div>lp filter frequency<input type="range" min="1" max="100" step="0.099">5</div><div>lp filter post gain<input type="range" min="1" max="10" step="0.009">1</div><div>carrier input gain<input type="range" min="0" max="10" step="0.01">1</div><div>carrier filter Q<input type="range" min="1" max="20" step="0.019">6</div><div>carrier filter post gain<input type="range" min="1" max="20" step="0.019">10</div><div>output gain<input type="range" min="0" max="10" step="0.01">1</div></div>
+	</div>
+	<a href="https://github.com/cwilso/vocoder" target="_new" id="footer" style="position: absolute; z-index:2; top: 0; right: 0; border: 0;"><img src="./Vocoder_files/forkme.png" alt="Fork me on GitHub"></a>
+	<div style="visibility:hidden; width: 1px; height: 1px" id="MIDIPlugin"></div>
+
+
+</body></html>
