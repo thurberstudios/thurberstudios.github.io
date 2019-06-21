@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 * {
@@ -17,19 +18,18 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  min-width: 100%; 
+  min-width: max-width:100%,
   min-height: 100%;
 }
 
 .content {
   position: fixed;
-  center: 0;
   left: ;
   bottom: 20;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   color: #f1f1f1;
-  width: 100%;
-  padding:100px;
+  width: max-width:100%,
+  padding:px;
 }
 
 
@@ -37,6 +37,24 @@ body {
 #myBtn:hover {
   background: #ddd;
   color: black;
+}
+.content1 {  position: fixed;
+  center: 0;
+  left: ;
+  bottom: ;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: max-width:100;
+  padding:0px;
+}
+.content11 {position: fixed;
+  center: 0;
+  left: ;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: max-width:100%;
+  padding:0px;
 }
 </style>
 </head>
@@ -53,9 +71,8 @@ body {
 
 <iframe src="https://clara.io/player/v2/53cdd47f-f3c7-44f8-b829-3cd76f25affe" width="400" height="400" frameborder="0">
 </iframe>
-  
-<img src="2.png" alt="Smiley face" width="250" height="100">
 </div>
+<span class="content11"><img src="2.png" alt="Smiley face" width="400" height="125"></span>
 <script>
 var video = document.getElementById("myVideo");
 var btn = document.getElementById("myBtn");
@@ -70,7 +87,6 @@ function myFunction() {
   }
 }
 </script>
-
 </body>
 </html>
 
