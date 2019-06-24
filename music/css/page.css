@@ -3,7 +3,7 @@ body{
 	font-family:Arial, sans;
 	margin:0px;
 	padding:0px;
-	font-size:14px;
+	font-size:1px;
 	width:100%;
 	height:100%;
 	background-color:#dfdfdf;
@@ -31,13 +31,13 @@ body a:active  {color:#000000 !important;}
 	position:relative;
 	overflow:hidden;
 	width:100%;
-	height:137px;
+	height:0px;
 	background-color:#FFFFFF;
 }
  
  #logoImage{
 	position:absolute;
-	height:134px;
+	height:0px;
 }
 
 #byFWD{
@@ -47,8 +47,8 @@ body a:active  {color:#000000 !important;}
 /* Menu holder */
 #menuHolder{
 	overflow:visible;
-	position:relative;
-	width:100%;
+	position:z-1;
+	width:0%;
 }
 
 #myDiv{
@@ -59,7 +59,7 @@ body a:active  {color:#000000 !important;}
 /* API */
 #apiWrapper{
 	padding-top:1px;
-	padding-bottom:30px;
+	padding-bottom:1px;
 	background-color:#dfdfdf;
 }
 
@@ -71,7 +71,7 @@ body a:active  {color:#000000 !important;}
 #apiMainHolder{
 	overflow:hidden;
 	position:relative;
-	margin-top:20px;
+	margin-top:0px;
 	
 }
 
@@ -110,8 +110,8 @@ body a:active  {color:#000000 !important;}
 #examplesGrid{
 	position:relative;
 	overflow:hidden;
-	margin-top:28px;
-	margin-bottom:32px;
+	margin-top:0px;
+	margin-bottom:0px;
 }
 
 #apiButtonsHolder{
@@ -127,7 +127,7 @@ body a:active  {color:#000000 !important;}
 
 #examplesWrapper{
 	background-color:#FFFFFF;
-	padding-bottom:17px;
+	padding-bottom:0px;
 }
 
 #mainInfoHolder{
@@ -190,7 +190,7 @@ td p{
 	color:#888888;
 	margin:0px;
 	padding:0px;
-	margin-top:24px;
+	margin-top:4px;
 }
 .fistTd{
 	width:47%;	
@@ -201,7 +201,7 @@ td p{
 }
 
 #lastP{
-	padding-bottom:20px;
+	padding-bottom:0px;
 	margin-bottom:0px;
 }
 
@@ -261,8 +261,8 @@ td p{
 	text-align:center;
 	margin-left:6px;
 	margin-right:6px;
-	margin-top:30x;
-	margin-bottom:20px;
+	margin-top:10x;
+	margin-bottom:10px;
 }
 
 .headerTextGrid{
@@ -278,15 +278,15 @@ td p{
 
 .specialNotesHeaderText{
 	font-family:myFont, Arial;
-	font-size:22px;
+	font-size:2px;
 	color:#FFFFFF;
 	text-align:center;
 	margin:0px;
 	padding:0px;
 	margin-left:6px;
 	margin-right:6px;
-	padding-top:30px;
-	margin-bottom:20px;
+	padding-top:0px;
+	margin-bottom:0px;
 }
 
 .whitePluse{
@@ -294,6 +294,6 @@ td p{
 }
 
 .whatIsInP{
-	margin-top:20px;
+	margin-top:0px;
 }
 
