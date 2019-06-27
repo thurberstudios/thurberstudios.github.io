@@ -1,0 +1,324 @@
+@font-face {
+	font-family: icomoon;
+	src: url(fonts/icomoon.ttf) format("truetype"), url(fonts/icomoon.woff) format("woff"), url(fonts/icomoon.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.icomoon {
+	text-transform: none; line-height: 1; font-family: "icomoon" !important; font-style: normal; font-variant: normal; font-weight: normal; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+[class^='icon-']::before {
+	text-transform: none; line-height: 1; font-family: "icomoon" !important; font-style: normal; font-variant: normal; font-weight: normal; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+[class*=' icon-']::before {
+	text-transform: none; line-height: 1; font-family: "icomoon" !important; font-style: normal; font-variant: normal; font-weight: normal; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.icon-cast::before {
+	content: "\e945";
+}
+.icon-uncast::before {
+	content: "\e946";
+}
+.icon-10::before {
+	content: "\e900";
+}
+.icon-AB::before {
+	content: "\e901";
+}
+.icon-author::before {
+	content: "\e902";
+}
+.icon-basket::before {
+	content: "\e903";
+}
+.icon-buffer::before {
+	content: "\e904";
+}
+.icon-calendar::before {
+	content: "\e905";
+}
+.icon-categories::before {
+	content: "\e906";
+}
+.icon-CC::before {
+	content: "\e907";
+}
+.icon-CC-off::before {
+	content: "\e908";
+}
+.icon-clipboard::before {
+	content: "\e909";
+}
+.icon-close::before {
+	content: "\e90a";
+}
+.icon-comments::before {
+	content: "\e90b";
+}
+.icon-digg::before {
+	content: "\e90c";
+}
+.icon-down::before {
+	content: "\e90d";
+}
+.icon-download::before {
+	content: "\e90e";
+}
+.icon-email::before {
+	content: "\e90f";
+}
+.icon-embed::before {
+	content: "\e910";
+}
+.icon-facebook::before {
+	content: "\e911";
+}
+.icon-FF-left::before {
+	content: "\e912";
+}
+.icon-FF-right::before {
+	content: "\e913";
+}
+.icon-flash::before {
+	content: "\e914";
+}
+.icon-flikr::before {
+	content: "\e915";
+}
+.icon-fullscreen::before {
+	content: "\e916";
+}
+.icon-full-width::before {
+	content: "\e917";
+}
+.icon-gallery::before {
+	content: "\e918";
+}
+.icon-google-plus::before {
+	content: "\e919";
+}
+.icon-info::before {
+	content: "\e91a";
+}
+.icon-info-off::before {
+	content: "\e91b";
+}
+.icon-instagram::before {
+	content: "\e91c";
+}
+.icon-left::before {
+	content: "\e91d";
+}
+.icon-left-arrow::before {
+	content: "\e91e";
+}
+.icon-link::before {
+	content: "\e91f";
+}
+.icon-linkedin::before {
+	content: "\e920";
+}
+.icon-loop::before {
+	content: "\e921";
+}
+.icon-love::before {
+	content: "\e922";
+}
+.icon-maps::before {
+	content: "\e923";
+}
+.icon-maximise::before {
+	content: "\e924";
+}
+.icon-minimise::before {
+	content: "\e925";
+}
+.icon-min-width::before {
+	content: "\e926";
+}
+.icon-music::before {
+	content: "\e927";
+}
+.icon-normalscreen::before {
+	content: "\e928";
+}
+.icon-pause::before {
+	content: "\e929";
+}
+.icon-phone::before {
+	content: "\e92a";
+}
+.icon-photo::before {
+	content: "\e92b";
+}
+.icon-pinterest::before {
+	content: "\e92c";
+}
+.icon-play::before {
+	content: "\e92d";
+}
+.icon-playlist::before {
+	content: "\e92e";
+}
+.icon-playlist-close-sidebar::before {
+	content: "\e92f";
+}
+.icon-playlist-sidebar::before {
+	content: "\e930";
+}
+.icon-projects::before {
+	content: "\e931";
+}
+.icon-quote::before {
+	content: "\e932";
+}
+.icon-reddit::before {
+	content: "\e933";
+}
+.icon-right::before {
+	content: "\e934";
+}
+.icon-right-arrow::before {
+	content: "\e935";
+}
+.icon-screen-maximise::before {
+	content: "\e936";
+}
+.icon-screen-minimise::before {
+	content: "\e937";
+}
+.icon-settings::before {
+	content: "\e938";
+}
+.icon-share::before {
+	content: "\e939";
+}
+.icon-share-off::before {
+	content: "\e93a";
+}
+.icon-shuffle::before {
+	content: "\e93b";
+}
+.icon-sound::before {
+	content: "\e93c";
+}
+.icon-sound-off::before {
+	content: "\e93d";
+}
+.icon-standard-post::before {
+	content: "\e93e";
+}
+.icon-tumblr::before {
+	content: "\e93f";
+}
+.icon-twitter::before {
+	content: "\e940";
+}
+.icon-up::before {
+	content: "\e941";
+}
+.icon-vimeo::before {
+	content: "\e942";
+}
+.icon-watch-later::before {
+	content: "\e943";
+}
+.icon-youtube::before {
+	content: "\e944";
+}
+.EVPMainButtonsNormalState {
+	color: rgb(102, 102, 102) !important; font-size: 18px !important;
+}
+.EVPMainButtonsSelectedState {
+	color: rgb(0, 153, 255) !important; font-size: 18px !important;
+}
+.icomoon.icon-10 {
+	font-size: 20px;
+}
+.icomoon.icon-CC {
+	font-size: 17px;
+}
+.icomoon.icon-CC-off {
+	font-size: 16px;
+}
+.icomoon.icon-embed {
+	font-size: 20px;
+}
+.icomoon.icon-download {
+	font-size: 16px;
+}
+.icomoon.icon-fullscreen {
+	font-size: 17px;
+}
+.icomoon.icon-AB {
+	font-size: 20px;
+}
+.icomoon.icon-cast {
+	top: 1px; font-size: 20px; position: relative;
+}
+.icomoon.icon-uncast {
+	top: 1px; font-size: 20px; position: relative;
+}
+.EVPLargePlayButtonNormalState {
+	width: 86px; height: 59px; color: rgb(106, 106, 106); font-size: 30px; position: absolute; cursor: pointer; background-color: rgb(31, 31, 31);
+}
+.EVPLargePlayButtonNormalState .table-cell-fwdevp-button {
+	padding: 2px 0px 0px;
+}
+.EVPLargePlayButtonSelectedState {
+	width: 80px; height: 80px; color: rgb(255, 255, 255); font-size: 30px; position: absolute; cursor: pointer; background-color: rgb(31, 31, 31);
+}
+.EVPLargePlayButtonSelectedState .table-cell-fwdevp-button {
+	padding: 2px 0px 0px;
+}
+.EVPCloseButtonNormalState {
+	width: 40px; height: 39px; color: rgb(255, 255, 255); font-size: 16px; position: absolute; cursor: pointer; background-color: rgb(31, 31, 31);
+}
+.EVPCloseButtonSelectedState {
+	width: 40px; height: 39px; color: rgb(255, 0, 0); font-size: 16px; position: absolute; cursor: pointer; background-color: rgb(31, 31, 31);
+}
+.EVPSocialMediaButtonsNormalState {
+	color: rgb(255, 255, 255) !important; font-size: 18px !important; font-weight: 100;
+}
+.EVPSocialMediaButtonsSelectedState {
+	color: rgb(0, 153, 255) !important; font-size: 18px !important;
+}
+.table-fwdevp-button {
+	width: 100%; height: 100%; display: table; position: absolute;
+}
+.table-cell-fwdevp-button {
+	width: 100%; height: 100%; text-align: center; vertical-align: middle; display: table-cell;
+}
+.EVPSubtitle {
+	margin: 0px 20px 12px; padding: 0px; text-align: center; color: rgb(255, 255, 255); line-height: 24px; font-family: Arial; font-size: 20px; font-weight: 600; text-shadow: 0px 0px 1px #000000;
+}
+.EVPAnnotationNormal {
+	background: rgba(31, 31, 31, 1) !important; padding: 6px 10px !important; width: 296px !important; color: rgb(255, 255, 255) !important;
+}
+.EVPAnnotationLinkNormal {
+	background: rgba(0, 153, 255, 1) !important; padding: 6px 10px !important; width: 320px !important; color: rgb(0, 0, 0) !important; line-height: 18px !important;
+}
+.EVPAnnotationLinkSelected {
+	background: rgba(31, 31, 31, 1) !important; padding: 6px 10px !important; width: 320px !important; color: rgb(255, 255, 255) !important; line-height: 18px !important;
+}
+.EVPAnnotationJavascriptNormal {
+	background: rgba(255, 255, 255, 1) !important; padding: 6px 10px !important; width: 320px !important; color: rgb(0, 0, 0) !important; line-height: 18px !important;
+}
+.EVPAnnotationJavascriptSelected {
+	background: rgba(0, 153, 255, 1) !important; padding: 6px 10px !important; width: 320px !important; color: rgb(255, 255, 255) !important; line-height: 18px !important;
+}
+.EVPAnnotationCSSNormal {
+	background: rgba(0, 0, 0, 0.8) !important; padding: 6px 10px !important; width: 280px !important; text-align: center !important; color: rgb(255, 255, 255) !important; line-height: 20px !important;
+}
+.EVPAnnotationCSSNormal p {
+	margin: 8px 0px !important; padding: 0px !important;
+}
+.EVPAnnotationAPINormal {
+	background: rgba(31, 31, 31, 1) !important; padding: 6px !important; width: 370px !important; text-align: center !important; color: rgb(255, 255, 255) !important;
+}
+.EVPAnnotationPlayNormal {
+	background: rgba(255, 255, 255, 1) !important; padding: 6px 10px !important; border-radius: 8px !important; border: 1px solid rgb(153, 153, 153) !important; border-image: none !important !important; width: 120px !important; text-align: center !important; color: rgb(0, 0, 0) !important; line-height: 18px !important; box-shadow: 1px 1px 1px #999999 !important;
+}
+.EVPAnnotationPlaySelected {
+	background: rgba(0, 153, 255, 1) !important; padding: 6px 10px !important; border-radius: 8px !important; border: 1px solid rgb(255, 255, 255) !important; border-image: none !important !important; width: 120px !important; text-align: center !important; color: rgb(255, 255, 255) !important; line-height: 18px !important; box-shadow: 1px 1px 1px #999999 !important;
+}
