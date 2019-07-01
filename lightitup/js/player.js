@@ -1,7 +1,7 @@
 (function () {
 
   var
-    AUDIO_FILE        = 'https://github.com/thurberstudios/thurberstudios.github.io/blob/master/mp3/Track19.mp3',
+    AUDIO_FILE        = '../songs/zircon_devils_spirit',
     PARTICLE_COUNT    = 250,
     MAX_PARTICLE_SIZE = 12,
     MIN_PARTICLE_SIZE = 2,
@@ -24,7 +24,7 @@
 
   Dancer.setOptions({
     flashSWF : '../../lib/soundmanager2.swf',
-    flashJS  : '/lib/soundmanager2.js'
+    flashJS  : '../../lib/soundmanager2.js'
   });
 
   dancer = new Dancer();
