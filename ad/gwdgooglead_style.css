@@ -1,0 +1,6 @@
+div[is=gwd-page].fs {
+	border: currentColor; border-image: none;
+}
+gwd-page.fs {
+	border: currentColor; border-image: none;
+}

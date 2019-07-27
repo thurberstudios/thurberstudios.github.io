@@ -1,0 +1,6 @@
+.gwd-inactive {
+	visibility: hidden;
+}
+gwd-page {
+	display: block;
+}
