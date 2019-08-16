@@ -48,18 +48,6 @@ if (!class_exists('Admin', false)) {
         }
 
         /**
-        * Filter IP
-        *
-        * @param string $ip the IP to filter
-        *
-        * @return validated IP or false
-        */
-        public function filterIP($ip)
-        {
-            return filter_var(trim($ip), FILTER_VALIDATE_IP);
-        }
-
-        /**
         * Return folders available inside given directory
         *
         * @param string $dir realtive path

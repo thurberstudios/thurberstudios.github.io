@@ -56,7 +56,7 @@ if (!class_exists('Logger', false)) {
                     fclose($f);
 
                 } else {
-                    Utils::setError('The script does not have permissions to write inside "vfm-admin/_content/log" folder. check CHMOD');
+                    Utils::setError('The script does not have permissions to write inside "vfm-admin/_include/log" folder. check CHMOD');
                     return;
                 }
             }
