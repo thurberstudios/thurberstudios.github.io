@@ -98,8 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $_CONFIG['ip_list'] = $ip_list;
     $_CONFIG['ip_redirect'] = $ip_redirect;
-    $_CONFIG['ip_blacklist'] = $ip_blacklist ? array_map(array( $admin, 'filterIP'), explode(',', $ip_blacklist)) : false;
-    $_CONFIG['ip_whitelist'] = $ip_whitelist ? array_map(array( $admin, 'filterIP'), explode(',', $ip_whitelist)) : false;
+    $_CONFIG['ip_blacklist'] = $ip_blacklist ? array_map('filterIP', explode(',', $ip_blacklist)) : false;
+    $_CONFIG['ip_whitelist'] = $ip_whitelist ? array_map('filterIP', explode(',', $ip_whitelist)) : false;
     
     $_CONFIG['lang'] = $_POST['lang'];
 
