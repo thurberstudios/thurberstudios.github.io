@@ -9,10 +9,10 @@
  * @author    Nicola Franchini <support@veno.it>
  * @copyright 2013 Nicola Franchini
  * @license   Exclusively sold on CodeCanyon
- * @version   3.4.8
+ * @version   3.4.6
  * @link      http://filemanager.veno.it/
  */
-$vfm_version = '3.4.8';
+$vfm_version = '3.4.6';
 
 require_once 'class/class.utils.php';
 
